@@ -302,34 +302,83 @@ export default function Home() {
 
             </div>
 
-            {/* Right: Booking Card */}
-            <div className="w-full lg:w-[380px] flex-shrink-0 bg-white rounded-lg shadow-2xl overflow-hidden">
+            {/* Right: Booking CTA Card */}
+            <a
+              href="#calendar"
+              className="group w-full lg:w-[380px] flex-shrink-0 bg-white rounded-2xl shadow-2xl overflow-hidden block no-underline hover:shadow-[0_20px_60px_rgba(0,0,0,0.35)] hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("calendar")?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              {/* Card header */}
               <div className="bg-[oklch(0.42_0.15_250)] px-6 py-5 text-white">
                 <span className="text-[oklch(0.84_0.18_90)] text-xs font-bold tracking-widest uppercase block mb-1">GET STARTED TODAY</span>
                 <h2 className="font-['Oswald'] font-bold text-2xl uppercase">BOOK YOUR CONSULTATION</h2>
               </div>
+
+              {/* Steps */}
               <ul className="bg-blue-50 px-6 py-4 border-b border-gray-100 space-y-2">
                 {[
-                  "COMPLETE SECURE CHECKOUT ($47)",
-                  "CHOOSE YOUR DATE & TIME",
-                  "GET STARTED WITH A CERTIFIED TRAINER",
+                  { num: "1", label: "COMPLETE SECURE CHECKOUT ($47)" },
+                  { num: "2", label: "CHOOSE YOUR DATE & TIME" },
+                  { num: "3", label: "GET STARTED WITH A CERTIFIED TRAINER" },
                 ].map((step) => (
-                  <li key={step} className="flex items-center gap-2 text-xs font-bold text-[oklch(0.42_0.15_250)] tracking-wide">
-                    <span className="w-5 h-5 rounded-full bg-[oklch(0.42_0.15_250)] text-[oklch(0.84_0.18_90)] flex items-center justify-center text-xs font-black flex-shrink-0">›</span>
-                    {step}
+                  <li key={step.num} className="flex items-center gap-3 text-xs font-bold text-[oklch(0.42_0.15_250)] tracking-wide">
+                    <span className="w-5 h-5 rounded-full bg-[oklch(0.42_0.15_250)] text-[oklch(0.84_0.18_90)] flex items-center justify-center text-xs font-black flex-shrink-0">{step.num}</span>
+                    {step.label}
                   </li>
                 ))}
               </ul>
-              <div className="p-2">
-                <GHLCalendarEmbed iframeId="pEFMl5kqrKtFXdW0FRtn_1773344073829" />
+
+              {/* Session info preview */}
+              <div className="px-6 py-5">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-md bg-blue-50 border border-blue-100 flex items-center justify-center flex-shrink-0">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="oklch(0.42 0.15 250)" strokeWidth="2">
+                      <path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                      <path d="M16 3v4M8 3v4M3 11h18"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="font-bold text-gray-900 text-sm leading-tight">Training Consultation at Facility</p>
+                    <p className="text-xs text-gray-400">Sit Means Sit Dog Training Atlanta</p>
+                  </div>
+                </div>
+
+                <div className="space-y-2 mb-5">
+                  {[
+                    { icon: "⏱", text: "60 Mins" },
+                    { icon: "📍", text: "7580 Granite Dr, Douglasville GA" },
+                    { icon: "🌐", text: "US/Eastern (EDT)" },
+                  ].map(({ icon, text }) => (
+                    <div key={text} className="flex items-center gap-2.5 text-xs text-gray-500">
+                      <span className="text-sm">{icon}</span>
+                      {text}
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between py-3 border-t border-b border-gray-100 mb-5">
+                  <span className="text-sm font-semibold text-gray-600">Total Amount</span>
+                  <span className="font-['Oswald'] font-bold text-xl text-gray-900">$47</span>
+                </div>
+
+                {/* CTA button */}
+                <div className="bg-[oklch(0.84_0.18_90)] group-hover:bg-[oklch(0.78_0.2_88)] rounded-lg py-4 px-5 flex items-center justify-between transition-colors duration-200">
+                  <span className="font-['Oswald'] font-bold text-base text-gray-900 uppercase tracking-wide">SELECT DATE & TIME</span>
+                  <span className="text-gray-900 text-xl font-bold group-hover:translate-x-1 transition-transform duration-200">›</span>
+                </div>
               </div>
+
+              {/* Guarantee */}
               <div className="mx-4 mb-4 bg-green-50 border border-green-200 rounded-lg p-3 flex items-start gap-2">
                 <span className="text-green-600 text-base leading-none mt-0.5 flex-shrink-0">✓</span>
                 <p className="text-xs text-green-800 leading-snug">
-                  <strong>Satisfaction Guarantee:</strong> If you are not satisfied with your evaluation, we'll refund the $47 — no questions asked.
+                  <strong>Satisfaction Guarantee:</strong> If you are not satisfied, we'll refund the $47 — no questions asked.
                 </p>
               </div>
-            </div>
+            </a>
 
           </div>
         </div>
