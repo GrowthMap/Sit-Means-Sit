@@ -223,14 +223,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white font-['Source_Sans_3',system-ui,sans-serif]">
 
-      {/* ===== TOP BAR ===== */}
-      <div className="bg-[oklch(0.42_0.15_250)] text-white text-xs font-semibold tracking-wide py-2 px-4 flex justify-between items-center flex-wrap gap-1">
-        <span>📍 SERVING ATLANTA &amp; SURROUNDING AREAS</span>
-        <a href="tel:4043340284" className="text-[oklch(0.84_0.18_90)] font-bold hover:underline">
-          REQUEST YOUR $47 EVALUATION &nbsp;|&nbsp; (404) 334-0284
-        </a>
-      </div>
-
       {/* ===== STICKY NAV ===== */}
       <header className="sticky top-0 z-50 bg-white border-b-4 border-[oklch(0.84_0.18_90)] shadow-md">
         <div className="container flex items-center justify-between py-3 gap-4">
@@ -301,7 +293,7 @@ export default function Home() {
                 href="#calendar"
                 className="btn-yellow inline-block px-8 py-4 rounded text-base shadow-xl"
               >
-                CLAIM YOUR $47 EVALUATION ›
+                CLAIM YOUR $47 FIRST VISIT EVALUATION ›
               </a>
               <div className="mt-4 flex items-start gap-2 text-white/80 text-sm">
                 <span className="text-green-400 font-bold flex-shrink-0">✓</span>
@@ -315,14 +307,11 @@ export default function Home() {
               <div className="bg-[oklch(0.42_0.15_250)] px-6 py-5 text-white">
                 <span className="text-[oklch(0.84_0.18_90)] text-xs font-bold tracking-widest uppercase block mb-1">GET STARTED TODAY</span>
                 <h2 className="font-['Oswald'] font-bold text-2xl uppercase">BOOK YOUR CONSULTATION</h2>
-                <span className="inline-block mt-2 text-xs bg-white/15 rounded-full px-3 py-1">
-                  🏷️ $47 Value — Limited Spots Available
-                </span>
               </div>
               <ul className="bg-blue-50 px-6 py-4 border-b border-gray-100 space-y-2">
                 {[
-                  "CHOOSE YOUR DATE & TIME BELOW",
                   "COMPLETE SECURE CHECKOUT ($47)",
+                  "CHOOSE YOUR DATE & TIME",
                   "GET STARTED WITH A CERTIFIED TRAINER",
                 ].map((step) => (
                   <li key={step} className="flex items-center gap-2 text-xs font-bold text-[oklch(0.42_0.15_250)] tracking-wide">
@@ -331,31 +320,8 @@ export default function Home() {
                   </li>
                 ))}
               </ul>
-              <div className="p-4 space-y-3">
-                {/* Booking Calendar Placeholder */}
-                <div className="border-2 border-dashed border-blue-200 rounded-lg bg-blue-50 p-6 text-center">
-                  <div className="text-3xl mb-2">📅</div>
-                  <p className="font-bold text-[oklch(0.42_0.15_250)] text-sm">Booking Calendar</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-relaxed">
-                    Select your preferred date & time
-                  </p>
-                </div>
-                {/* Secure Checkout Placeholder */}
-                <div className="border-2 border-dashed border-green-200 rounded-lg bg-green-50 p-6 text-center">
-                  <div className="text-3xl mb-2">💳</div>
-                  <p className="font-bold text-green-700 text-sm">Secure Checkout — $47</p>
-                  <p className="text-xs text-gray-400 mt-1 leading-relaxed">
-                    Complete payment securely
-                  </p>
-                </div>
-              </div>
-              <div className="px-4 pb-4">
-                <a
-                  href="#calendar"
-                  className="btn-yellow block w-full py-3 px-6 rounded text-sm font-bold uppercase tracking-wider text-center"
-                >
-                  SCROLL TO BOOK NOW ›
-                </a>
+              <div className="p-2">
+                <GHLCalendarEmbed iframeId="pEFMl5kqrKtFXdW0FRtn_1773344073829" />
               </div>
               <div className="mx-4 mb-4 bg-green-50 border border-green-200 rounded-lg p-3 flex items-start gap-2">
                 <span className="text-green-600 text-base leading-none mt-0.5 flex-shrink-0">✓</span>
@@ -377,7 +343,7 @@ export default function Home() {
               { num: "500+", label: "Happy Dogs Trained" },
               { num: "4.7★", label: "Google Rating (242 Reviews)" },
               { num: "20+", label: "Years of Experience" },
-              { num: "$47", label: "Consultation Value" },
+              { num: "$249", label: "Consultation Value — Only $47 Today" },
             ].map(({ num, label }) => (
               <div key={label}>
                 <div className="font-['Oswald'] font-bold text-4xl text-[oklch(0.84_0.18_90)]">{num}</div>
@@ -626,8 +592,8 @@ export default function Home() {
       <section id="calendar" className="w-full bg-white py-12">
         <div className="w-full px-4 md:px-8 lg:px-12">
           <div className="mb-8 text-center">
-            <h2 className="font-['Oswald'] font-bold text-3xl md:text-4xl text-gray-900 mb-2">Select Your Consultation Time</h2>
-            <p className="text-gray-600 text-lg">Choose a date and time that works best for you</p>
+            <h2 className="font-['Oswald'] font-bold text-3xl md:text-4xl text-gray-900 mb-2">You're Almost There — Book Your Date</h2>
+            <p className="text-gray-600 text-lg">Select a date and time to complete your consultation booking</p>
           </div>
           <GHLCalendarEmbed iframeId="pEFMl5kqrKtFXdW0FRtn_1773344073829" />
         </div>
