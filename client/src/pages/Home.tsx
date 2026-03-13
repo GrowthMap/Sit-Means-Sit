@@ -504,10 +504,19 @@ export default function Home() {
               </div>
               <p className="text-sm italic text-gray-500 text-center">"Our dog is completely transformed!" — Atlanta Client</p>
             </div>
-            <VideoPlaceholder
-              caption='"Best investment we ever made for our family." — Atlanta Client'
-              driveUrl="https://drive.google.com/file/d/1MbV_WiOWUk1wxBO-5igtRk70VuvguqZH/view"
-            />
+            <div className="flex flex-col gap-3">
+              <div className="relative w-full aspect-video bg-gray-900 rounded-lg overflow-hidden border-2 border-[oklch(0.42_0.15_250)]">
+                <video
+                  className="absolute inset-0 w-full h-full object-contain"
+                  controls
+                  playsInline
+                  preload="metadata"
+                >
+                  <source src="/Cristine AD Captions.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <p className="text-sm italic text-gray-500 text-center">"Best investment we ever made for our family." — Atlanta Client</p>
+            </div>
           </div>
         </div>
       </section>
