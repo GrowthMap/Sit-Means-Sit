@@ -343,7 +343,7 @@ export default function Home() {
               { num: "500+", label: "Happy Dogs Trained" },
               { num: "4.7★", label: "Google Rating (242 Reviews)" },
               { num: "20+", label: "Years of Experience" },
-              { num: "$249", label: "Consultation Value — Only $47 Today" },
+              { num: "$249", label: "Consultation Value" },
             ].map(({ num, label }) => (
               <div key={label}>
                 <div className="font-['Oswald'] font-bold text-4xl text-[oklch(0.84_0.18_90)]">{num}</div>
