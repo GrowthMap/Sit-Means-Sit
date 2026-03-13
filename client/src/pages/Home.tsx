@@ -359,10 +359,10 @@ export default function Home() {
                   ))}
                 </div>
 
-                <div className="flex items-center justify-between py-3 border-t border-b border-gray-100 mb-5">
+                {/* <div className="flex items-center justify-between py-3 border-t border-b border-gray-100 mb-5">
                   <span className="text-sm font-semibold text-gray-600">Total Amount</span>
                   <span className="font-['Oswald'] font-bold text-xl text-gray-900">$47</span>
-                </div>
+                </div> */}
 
                 {/* CTA button */}
                 <div className="bg-[oklch(0.84_0.18_90)] group-hover:bg-[oklch(0.78_0.2_88)] rounded-lg py-4 px-5 flex items-center justify-between transition-colors duration-200">
