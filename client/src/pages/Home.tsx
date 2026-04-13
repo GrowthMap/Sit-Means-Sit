@@ -3,7 +3,7 @@
  * Design: Direct-Response Conversion Machine
  * Colors: Royal Blue (#1a5fa8) + Signal Yellow (#f5c518) + Near-Black (#1a1a1a)
  * Typography: Oswald (headlines) + Source Sans 3 (body)
- * Goal: Single conversion — book the $47 consultation
+ * Goal: Single conversion — book the $50 consultation
  */
 
 import { useEffect, useRef, useState } from "react";
@@ -255,7 +255,7 @@ export default function Home() {
           </nav>
           {/* Mobile CTA */}
           <a href="#book" className="md:hidden btn-yellow px-4 py-2 rounded text-xs">
-            BOOK $47
+            BOOK $50
           </a>
         </div>
       </header>
@@ -293,11 +293,11 @@ export default function Home() {
                 href="#calendar"
                 className="btn-yellow inline-block px-8 py-4 rounded text-base shadow-xl"
               >
-                CLAIM YOUR $47 FIRST VISIT EVALUATION ›
+                CLAIM YOUR $50 FIRST VISIT EVALUATION ›
               </a>
               <div className="mt-4 flex items-start gap-2 text-white/80 text-sm">
                 <span className="text-green-400 font-bold flex-shrink-0">✓</span>
-                <p><strong className="text-white">Satisfaction Guarantee:</strong> If you are not satisfied with your evaluation, we'll refund the $47 — no questions asked.</p>
+                <p><strong className="text-white">Satisfaction Guarantee:</strong> If you are not satisfied with your evaluation, we'll refund the $50 — no questions asked.</p>
               </div>
 
             </div>
@@ -320,7 +320,7 @@ export default function Home() {
               {/* Steps */}
               <ul className="bg-blue-50 px-6 py-4 border-b border-gray-100 space-y-2">
                 {[
-                  { num: "1", label: "COMPLETE SECURE CHECKOUT ($47)" },
+                  { num: "1", label: "COMPLETE SECURE CHECKOUT ($50)" },
                   { num: "2", label: "CHOOSE YOUR DATE & TIME" },
                   { num: "3", label: "GET STARTED WITH A CERTIFIED TRAINER" },
                 ].map((step) => (
@@ -361,7 +361,7 @@ export default function Home() {
 
                 {/* <div className="flex items-center justify-between py-3 border-t border-b border-gray-100 mb-5">
                   <span className="text-sm font-semibold text-gray-600">Total Amount</span>
-                  <span className="font-['Oswald'] font-bold text-xl text-gray-900">$47</span>
+                  <span className="font-['Oswald'] font-bold text-xl text-gray-900">$50</span>
                 </div> */}
 
                 {/* CTA button */}
@@ -375,7 +375,7 @@ export default function Home() {
               <div className="mx-4 mb-4 bg-green-50 border border-green-200 rounded-lg p-3 flex items-start gap-2">
                 <span className="text-green-600 text-base leading-none mt-0.5 flex-shrink-0">✓</span>
                 <p className="text-xs text-green-800 leading-snug">
-                  <strong>Satisfaction Guarantee:</strong> If you are not satisfied, we'll refund the $47 — no questions asked.
+                  <strong>Satisfaction Guarantee:</strong> If you are not satisfied, we'll refund the $50 — no questions asked.
                 </p>
               </div>
             </a>
@@ -608,7 +608,7 @@ export default function Home() {
                 <span className="text-3xl">🔒</span>
                 <div>
                   <p className="font-bold text-[oklch(0.84_0.18_90)] text-base">Satisfaction Guarantee</p>
-                  <p className="text-white/70 text-sm mt-1">If you are not satisfied with your evaluation, we'll refund the $47 — no questions asked.</p>
+                  <p className="text-white/70 text-sm mt-1">If you are not satisfied with your evaluation, we'll refund the $50 — no questions asked.</p>
                 </div>
               </div>
             </div>
@@ -624,7 +624,7 @@ export default function Home() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-bold text-[oklch(0.84_0.18_90)] flex-shrink-0">2.</span>
-                    <span>Complete secure payment ($47)</span>
+                    <span>Complete secure payment ($50)</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="font-bold text-[oklch(0.84_0.18_90)] flex-shrink-0">3.</span>
